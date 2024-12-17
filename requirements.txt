@@ -1,0 +1,11 @@
+Flask
+paramiko
+pyautogui
+requests
+pyinstaller
+Flask-Mail
+Flask-Session
+six
+keyboard
+requests
+flask

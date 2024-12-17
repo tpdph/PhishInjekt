@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screenshots</title>
+</head>
+<body>
+    <h1>Screenshots</h1>
+    <ul>
+        {% for screenshot in screenshots %}
+            <li><a href="/screenshots/{{ screenshot }}"><img src="/screenshots/{{ screenshot }}" alt="{{ screenshot }}" width="200"></a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

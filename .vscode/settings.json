@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./flask-session/src/flask_",
+        "./flask-session/src/flask_",
+        "./flask-session/src"
+    ],
+    "python.analysis.autoImportCompletions": true
+}
