@@ -325,9 +325,26 @@ def get_credentials():
 def list_campaigns():
     return "List of campaigns"
 
-@app.route('/campaigns/new')
-def new_campaign():
-    return "Create a new campaign"
+@app.route('/campaigns/new', methods=['GET', 'POST'])
+async def new_campaign():
+    if request.method == 'POST':
+        name = request.form['name']
+        target_url = request.form['target_url']
+        
+        try:
+            result = await use_mcp_tool({
+                server_name: 'gophish',
+                tool_name: 'create_campaign',
+                arguments: {
+                    name: name,
+                    target_url: target_url
+                }
+            })
+            return f"Gophish campaign created: {result.content[0].text}"
+        except Exception as error:
+            return f"Error creating Gophish campaign: {error}"
+    else:
+        return render_template('new_campaign.html')
 
 @app.route('/settings')
 def settings():

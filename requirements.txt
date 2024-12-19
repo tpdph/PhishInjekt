@@ -7,5 +7,5 @@ Flask-Mail
 Flask-Session
 six
 keyboard
-requests
 flask
+openai
