@@ -5,6 +5,7 @@ import keyboard
 import pyautogui
 import os
 import time
+import tempfile
 
 screenshot_dir = tempfile.mkdtemp()
 

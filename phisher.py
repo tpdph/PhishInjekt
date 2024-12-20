@@ -16,6 +16,8 @@ import asyncio
 import tkinter as tk
 from tkinter import ttk, Label, Entry, Button, Toplevel, Text, Scrollbar, messagebox
 from modelcontextprotocol.sdk.client import use_mcp_tool
+import sys
+sys.path.append(os.path.abspath('.'))
 
 app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
