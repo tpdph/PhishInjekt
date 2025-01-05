@@ -1,0 +1,9 @@
+database:
+  path: tvef.db
+
+metasploit_rpc:
+  host: 'http://localhost:3790'
+  user: 'username'
+  password: 'password'
+  lhost: 'localhost'
+  lport: 4444
