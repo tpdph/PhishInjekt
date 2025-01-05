@@ -12,7 +12,6 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 def get_api_key_from_config():
     # Placeholder function to get API key from a configuration file
-    # Replace this with actual implementation
     return os.getenv('GOPHISH_API_KEY')
 
 class Phisher:
@@ -24,7 +23,6 @@ class Phisher:
         self.setup_ui()
 
     def setup_ui(self):
-        # UI setup code here
         self.name_label = tk.Label(self.master, text="Campaign Name:")
         self.name_label.pack()
         self.name_entry = tk.Entry(self.master)
