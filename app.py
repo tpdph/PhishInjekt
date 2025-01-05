@@ -8,6 +8,7 @@ import requests
 import tempfile
 from flask import Flask, render_template, redirect, request, session, jsonify
 from flask_session import Session
+# import teleh4ck.main
 
 app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
@@ -33,6 +34,8 @@ def main():
         android_selector()
     elif os_choice == "4":
         ios_selector()
+    elif os_choice == "5":
+        teleh4ck_menu()
     else:
         print("Invalid choice. Please try again.")
         main()
@@ -211,6 +214,9 @@ def get_credentials():
         return jsonify({'username': session['username'], 'password': session['password'], 'ip_address': session['ip_address']})
     else:
         return jsonify({'message': 'No credentials found'})
+
+def teleh4ck_menu():
+    print("teleh4ck menu is not implemented.")
 
 def ios_selector():
     print("Select an iOS distribution:")
@@ -474,4 +480,3 @@ def ios_selector():
 if __name__ == "__main__":
     from flask import send_from_directory
     app.run(debug=True)
- platform-specific features
